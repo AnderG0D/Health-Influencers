@@ -1,6 +1,6 @@
 {
     "functions": {
-      "api/perplexity.js": {
+      "app/api/perplexity/route.js": {
         "maxDuration": 60
       }
     }
