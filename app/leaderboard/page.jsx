@@ -27,7 +27,7 @@ export default function Leaderboard() {
                 const groupedData = groupByInfluencer(claims);
                 const influencersWithScores = calculateTrustScores(groupedData);
                 setInfluencersData(influencersWithScores);
-                console.log("Influencers data:", influencersWithScores);
+                //console.log("Influencers data:", influencersWithScores);
             } catch (error) {
                 console.error("Error parsing influencers data:", error);
             }
@@ -44,7 +44,7 @@ export default function Leaderboard() {
             }
 
             acc[claim.influencer].push({ ...claim });
-            console.log("Claims grouped by influencer:", acc);
+            //console.log("Claims grouped by influencer:", acc);
             return acc;
         }, {});
     };

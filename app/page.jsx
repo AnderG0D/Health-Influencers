@@ -34,14 +34,14 @@ export default function AdminPanel() {
       journals,
     };
 
-    console.log("\nSearching with parameters:", searchParams);
+    //console.log("\nSearching with parameters:", searchParams);
 
     try {
       const response = await axios.post("/api/perplexity", searchParams);
 
       if (response.status === 200) {
         localStorage.setItem("searchResults", JSON.stringify(response.data));
-        console.log("\nSearch results:", response.data);
+        //console.log("\nSearch results:", response.data);
         router.push("/leaderboard");
       }
     } catch (error) {

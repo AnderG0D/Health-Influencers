@@ -14,14 +14,14 @@ export default function InfluencerDetails() {
     const storedInfluencer = localStorage.getItem("selectedInfluencer");
     if (storedInfluencer) {
       setInfluencerData(JSON.parse(storedInfluencer));
-      console.log("Influencer data:", JSON.parse(storedInfluencer));
+      //console.log("Influencer data:", JSON.parse(storedInfluencer));
     } else {
       router.push("/leaderboard");
     }
   }, [router]);
 
   if (!influencerData) {
-    return <p className="text-center text-gray-600">Loading influencer data...</p>;
+    return <p className="text-center text-gray-600">No influencer data...</p>;
   }
 
   return (
